@@ -13,13 +13,13 @@ understands.
 With (plain) Python:
 
 ```
-python flatex2parquet.py Depotumsaetze.csv -o parquet.csv
+python cli.py Depotumsaetze.csv -o parqet.csv
 ```
 
 With poetry:
 
 ```
-poetry run flatex2parquet Depotumsaetze.csv -o parquet.csv
+poetry run flatex2parqet Depotumsaetze.csv -o parqet.csv
 ```
 
 ## Limitations

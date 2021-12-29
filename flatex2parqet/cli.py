@@ -17,7 +17,7 @@ import sys
 
 # empty last column due to parsing error
 # (see https://community.parqet.com/c/discussions/csv-import)
-parqet_FIELDNAMES = ["date", "fee", "isin", "price", "shares", "tax", "type", ""]
+PARQET_FIELDNAMES = ["date", "fee", "isin", "price", "shares", "tax", "type", ""]
 
 
 def main():
@@ -37,7 +37,7 @@ def main():
     args = parser.parse_args()
 
     parqet_writer = csv.DictWriter(
-        args.output, parqet_FIELDNAMES, delimiter=";", quoting=csv.QUOTE_NONE
+        args.output, PARQET_FIELDNAMES, delimiter=";", quoting=csv.QUOTE_NONE
     )
     parqet_writer.writeheader()
     flatex_reader = csv.DictReader(args.input, delimiter=";")
